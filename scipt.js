@@ -1,0 +1,26 @@
+window.addEventListener("DOMContentLoaded", function() {
+	console.log(document.getElementById("header"));
+})
+
+function onSignIn(googleUser) {
+	document.getElementById("header").style.display = "block";
+	var profile = googleUser.getBasicProfile();
+	$(".g-signin2").css("display","none");
+	$(".data").css("display","block");
+	$("#pic").attr('src', profile.getImageUrl());
+	$("#email").text(profile.getEmail());
+	$("#header").css("display", "block");
+	name(profile.getEmail());
+
+
+}
+
+function signOut() {
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function(){
+		alert("You have been successfully signed out");
+
+		$(".g-signin2").css("display", "block");
+		$(".data").css("display", "none");
+	})
+}

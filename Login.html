@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="google-signin-client_id" content="338292999182-56u3o1gr1in18m8lc6ostd4sbvtl585h.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="scipt.js"></script>
+	<style type="text/css">
+		.g-signin2{
+			margin-top: 500px;
+			margin-left: 500px;
+		}
+		.data{
+			display: none;
+		}
+
+	</style>
+	<div class="g-signin2" data-onsuccess = "onSignIn"></div>
+	<div class="data">
+		<img id="pic" class="img-circle" width="50" height="50"/>
+		<button onclick="signOut()" class="btn btn-danger">SignOut</button>
+	</div>
+</head>
+<body>
+	
+</body>
+</html>

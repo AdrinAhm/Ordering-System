@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<LINK rel=stylesheet href="Menu.css">
+	<title>Dessert</title>
+</head>
+<body>
+	<ul>
+	  <li class="dropdown">
+	    <a href="Menu.html" class="dropbtn">Menu</a>
+	    <div class="dropdown-content">
+	      <a href="Appetizers.html">Appetizers</a>
+	      <a href="Entrees.html">Entrees</a>
+	      <a href="Dessert.html">Dessert</a>
+	    </div>
+	  </li>
+	  <li><a href="Review.html" onclick="review();">Review Orders</a></li>
+	</ul>
+	
+	<p id="10p">Carrot</p>
+	<input type="number" id="10" step="1" min="0"/>
+	<button class="button button1" onclick="setPrice(3.95); addition(10);">Order</button>	
+
+	<p id="11p">Chocolate</p>
+	<input type="number" id="11" step="1" min="0"/>
+	<button class="button button1" onclick="setPrice(4.5); addition(11);">Order</button>
+
+	<p id="12p">Coconut</p>
+	<input type="number" id="12" step="1" min="0"/>
+	<button class="button button1" onclick="setPrice(3.95); addition(12);">Order</button>
+
+	<p id="13p">Ice cream</p>
+	<input type="number" id="13" step="1" min="0"/>
+	<button class="button button1" onclick="setPrice(2.95); addition(13);">Order</button>
+
+	<p id="number">Here is number</p>
+
+<script src="Main.js"></script>
+</body>
+</html>

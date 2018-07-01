@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<style>
+#button {
+  position: relative;
+  left: 1400px;
+  bottom: 80px;
+}
+#inp{
+	position: relative;
+  left: 1210px;
+  bottom: 80px;
+}
+table {
+    width:80%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    padding: 15px;
+    text-align: left;
+}
+table#myTable tr:nth-child(even) {
+    background-color: #eee;
+}
+table#myTable tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#myTable th {
+    background-color: black;
+    color: white;
+}
+</style>
+
+<table id="myTable">
+	<tr>
+   	 <th>OrderID</th>
+   	 <th>Foods</th> 
+   	 <th>OrderDate</th>
+   	 <th>Quantity</th>
+ 	 </tr>
+ 	 <tr>
+ 	 	<td>None</td>
+   		<td>None</td>
+    	<td>None</td>
+    	<td>None</td>
+ 	 </tr>
+</table>
+
+<p>Click the button to create a TR and a TD element.</p>
+
+<button id="button" onclick="cancel()">Cancel</button>
+<button id="button" onclick="fulfilled()">Fulfilled</button>
+<input style="width: 50px;" type="number" id="inp" step="1" min="1"/>
+
+<button onclick="addRow()">Hi</button>
+<script>
+	var OrderId = 123;
+	var Foods = 2;
+	var OrderDate = 2;
+	var Quantity = 0;
+
+	function addRow() {
+		console.log("hi");
+		
+
+		var table = document.getElementById("myTable");
+		var newRow = table.insertRow(1);
+
+		var cel1  = newRow.insertCell(0);
+		var cel2  = newRow.insertCell(1);
+		var cel3  = newRow.insertCell(2);
+		var cel4  = newRow.insertCell(3);
+
+		cel1.innerHTML = OrderId;
+		cel2.innerHTML = Foods;
+		cel3.innerHTML = OrderDate;
+		cel4.innerHTML = Quantity;
+	}
+	function cancel(){
+		var x = document.getElementById("myTable");
+		x.deleteRow(document.getElementById("inp").value);
+		var info =  x.rows[document.getElementById("inp")].cells;
+	}
+	function fulfilled(){
+		var x = document.getElementById("myTable");
+		x.deleteRow(document.getElementById("inp").value);
+		var info =  x.rows[document.getElementById("inp")].cells;
+	}
+</script>
+
+</body>
+</html>

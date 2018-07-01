@@ -1,0 +1,271 @@
+<HTML>
+
+<HEAD>
+	<TITLE>Bonnie's Famous Vegan Diner Menu Page</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type><LINK rel=stylesheet href="Menu.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta name="google-signin-client_id" content="338292999182-56u3o1gr1in18m8lc6ostd4sbvtl585h.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="scipt.js"></script>
+	<style type="text/css">
+		.g-signin2{
+			
+		}
+		.data{
+			display: none;
+			float: right;
+		}
+
+	</style>
+	<h1 id="topper">Welcome to Bonnie's </h1>
+	<div class="g-signin2" data-onsuccess = "onSignIn"></div>
+	<div class="data">
+		<img id="pic" class="img-circle" width="50" height="50"/>
+		<button onclick="signOut()" class="btn btn-danger">SignOut</button>
+	</div>
+
+</HEAD>
+
+<body bgColor=#f4c842;>
+
+
+<div id="header" style="display: none;">
+	<CENTER><IMG alt="Italian Trulli" src="logo.png"></CENTER>
+	<H3 id = "top">Bonnie's Vegan Cuisine</H3>
+	<ul>
+	  <li><a href="#" onclick="Appetizers();">Appetizers</a></li>
+	  <li><a href="#" onclick="Entrees();">Entrees</a></li>    
+	  <li><a href="#" onclick="Dessert();">Dessert</a></li>    
+	  <li><a href="#" onclick="review();">Review Orders</a></li>
+	</ul>
+</div>
+
+<div style="display: none;" id="comformation">
+	<h3 id="1w">Bbq Drumsticks </h3>
+	<p id="1q"></p>
+	<p align="right">$6.25</p>
+	<h3 id="2w">French Fries </h3>
+	<p id="2q"></p>
+	<p align="right">$4.25</p>
+	<h3 id="3w">Chick-un Nuggets </h3>
+	<p id="3q"></p>
+	<p align="right">$5.95</p>
+	<h3 id="4w">Cauliflower Buffalo Wings </h3>
+	<p id="4q"></p>
+	<p align="right">$6.95</p>
+	<h3 id="5w">Chick-un Marinara Melt </h3>
+	<p id="5q"></p>
+	<p align="right">$10.45</p>
+	<h3 id="6w">Spinach Artichooke Pesto Pizza </h3>
+	<p id="6q"></p>
+	<p align="right">$10.95</p>
+	<h3 id="7w">Classic Veggie Burger </h3>
+	<p id="7q"></p>
+	<p align="right">$9.45</p>
+	<h3 id="8w">Jackfruit Tacos </h3>
+	<p id="8q"></p>
+	<p align="right">$9.45</p>
+	<h3 id="9w">Southwestern Quinoa Salda </h3>
+	<p id="9q"></p>
+	<p align="right">$9.45</p>
+	<h3 id="10w">Carrot Cake </h3>
+	<p id="10q"></p>
+	<p align="right">$3.95</p>
+	<h3 id="11w">Chocolate Cake </h3>
+	<p id="11q"></p>
+	<p align="right">$4.50</p>
+	<h3 id="12w">Coconut Cake </h3>
+	<p id="12q" ></p>
+	<p align="right">$3.95</p>
+	<h3 id="13w">Ice cream </h3>
+	<p id="13q"></p>
+	<p align="right">$2.95</p>
+	<button class="button button1" onclick="done();">Submit</button>
+</div>
+
+<div id="Appetizers">
+	<div id="s1">
+		<img src="Food1.jpg" width="100" height="100">
+		<h3 id="1p">Bbq Drumsticks</h3>
+		<p>Vegan drunsticks dizzled in a BBQ sauce</p>
+		<h3>$6.25</h3>
+		<input style="width: 30px;" type="number" id="1" step="1" min="0"/>
+		<button class="button button1" onclick="addition(1);">Order</button>	
+	</div>
+
+	<div id= "s2">
+		<img src="Food2.jpg" width="100" height="100">
+		<h3 id="2p">French Fries</h3>
+		<p>Fresh never frozen golden fries</p>
+		<h3>$4.25</h3>
+		<input style="width: 30px;" type="number" id="2" step="1" min="0"/>
+		<button class="button button1" onclick="addition(2);">Order</button>
+	</div>
+	<div id="s3">
+		<img src="Food3.jpg" width="100" height="100">
+		<h3 id="3p">Chick-un Nuggets</h3>
+		<p>Crispy chick-un nugets served with a sweet chill deeping sauce</p>
+		<h3>$5.95</h3>
+		<input style="width: 30px;" type="number" id="3" step="1" min="0"/>
+		<button class="button button1" onclick="addition(3);">Order</button>
+	</div>
+	<div id="s4">
+		<img src="Food4.jpg" width="100" height="100">
+		<h3 id="4p">Cauliflower Buffalo Wings</h3>
+		<p>Battered and Fried Cauliflower covered with buffalo sauce and served with ranch</p>
+		<h3>$6.95</h3>
+		<input style="width: 30px;" type="number" id="4" step="1" min="0"/>
+		<button class="button button1" onclick="addition(4);">Order</button>
+	</div>
+</div>
+
+<div id="Entrees">
+	<div id="s1">
+		<img src="Food5.jpg" width="100" height="100">
+		<h3 id="5p">Chick-un Marinara Melt</h3>
+		<p>Chick-un with marinara souce, melted vegan mozarella on a toasted frech roll</p>
+		<h3>$10.45</h3>
+		<input style="width: 30px;" type="number" id="5" step="1" min="0"/>
+		<button class="button button1" onclick="addition(5);">Order</button>	
+	</div>
+	<div id="s2">
+		<img src="Food6.jpg" width="100" height="100">
+		<h3 id="6p">Spinach Artichooke Pesto Pizza</h3>
+		<p>Galric pesto sauce with oven roated artichoke hearts, baby spinaach, mushrooms, vegan mozarella, and wild pregano</p>
+		<h3>$10.95</h3>
+		<input style="width: 30px;" type="number" id="6" step="1" min="0"/>
+		<button class="button button1" onclick="addition(6);">Order</button>
+	</div>
+	<div id="s3">
+		<img src="Food7.jpg" width="100" height="100">
+		<h3 id="7p">Classic Veggie Burger</h3>
+		<p>Homemade patty served with house dressing, tomato, lettuce, onion, pickles, ketchup and mustard on a wheat bun</p>
+		<h3>$9.45</h3>
+		<input style="width: 30px;" type="number" id="7" step="1" min="0"/>
+		<button class="button button1" onclick="addition(7);">Order</button>
+	</div>
+	<div id="s4">
+		<img src="Food8.jpg" width="100" height="100">
+		<h3 id="8p">Jackfruit Tacos</h3>
+		<p>Two corn tortillas topped with shredded jackfruit, cabbage, avocado, sriracha mayo, homemade salsa fresca and cilantro</p>
+		<h3>$9.45</h3>
+		<input style="width: 30px;" type="number" id="8" step="1" min="0"/>
+		<button class="button button1" onclick="addition(8);">Order</button>
+	</div>
+	<div id="s5">
+		<img src="Food9.jpg" width="100" height="100">
+		<h3 id="9p">Southwestern Quinoa Salda</h3>
+		<p>Quinoa, black beans, red bell peppers, sweet corn, onions, cilantro, and lemon juice. Served on a bed of massaged kale with an italian vinagrette</p>
+		<h3>$9.45</h3>
+		<input style="width: 30px;" type="number" id="9" step="1" min="0"/>
+		<button class="button button1" onclick="addition(9);">Order</button>
+	</div>
+</div>
+
+<div id="Dessert">
+	<div id="s1">
+		<img src="Food10.jpg" width="100" height="100">
+		<h3 id="10p">Carrot Cake</h3>
+		<h3>$3.95</h3>
+		<input style="width: 30px;" type="number" id="10" step="1" min="0"/>
+		<button class="button button1" onclick="addition(10);">Order</button>
+	</div>
+	<div id="s2">
+		<img src="Food11.jpg" width="100" height="100">
+		<h3 id="11p">Chocolate Cake</h3>
+		<h3>$4.50</h3>
+		<input style="width: 30px;" type="number" id="11" step="1" min="0"/>
+		<button class="button button1" onclick="addition(11);">Order</button>
+	</div>
+	<div id="s3">		
+		<img src="Food12.jpg" width="100" height="100">
+		<h3 id="12p">Coconut Cake</h3>
+		<h3>$3.95</h3>
+		<input style="width: 30px;" type="number" id="12" step="1" min="0"/>
+		<button class="button button1" onclick="addition(12);">Order</button>
+	</div>
+	<div id="s4">
+		<img src="Food13.jpg" width="100" height="100">
+		<h3 id="13p">Ice cream</h3>
+		<h3>$2.95</h3>
+		<p>Choice of chocolate, vanilla, strawberry, or flavor of the month</p>
+		<input style="width: 30px;" type="number" id="13" step="1" min="0"/>
+		<button class="button button1" onclick="addition(13);">Order</button>
+	</div>
+</div>
+
+<div id="Review">
+	<p style="display: none;" id="d1">Bbq</p>
+	<p style="display: none;" id="d1">$6.25</p>
+	<input style="display: none;" type="number" id="i1" step="1" min="0"/>
+	<button style="display: none;" id="close1" onclick="close(1);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d2">French</p>
+	<p style="display: none;" id="d2">$4.25</p>
+	<input style="display: none;" type="number" id="i2" step="1" min="0"/>
+	<button style="display: none;" id="close2" onclick="close();"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d3">Chicken</p>
+	<p style="display: none;" id="d3">$5.95</p>
+	<input style="display: none;" type="number" id="i3" step="1" min="0"/>
+	<button style="display: none;" id="close3" onclick="close(3);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d4">Cauliflower</p>
+	<p style="display: none;" id="d4">$6.95</p>
+	<input style="display: none;" type="number" id="i4" step="1" min="0"/>
+	<button style="display: none;" id="close4" onclick="close(4);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d5">chicken-un</p>
+	<p style="display: none;" id="d5">$10.45</p>
+	<input style="display: none;" type="number" id="i5" step="1" min="0"/>
+	<button style="display: none;" id="close5" onclick="close(5);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d6">spinach</p>
+	<p style="display: none;" id="d6">$10.95</p>
+	<input style="display: none;" type="number" id="i6" step="1" min="0"/>
+	<button style="display: none;" id="close6" onclick="close(6);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d7">classic</p>
+	<p style="display: none;" id="d7">$9.45</p>
+	<input style="display: none;" type="number" id="i7" step="1" min="0"/>
+	<button style="display: none;" id="close7" onclick="close(7);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d8">jackfriut</p>
+	<p style="display: none;" id="d8">$9.45</p>
+	<input style="display: none;" type="number" id="i8" step="1" min="0"/>
+	<button style="display: none;" id="close8" onclick="close(8);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d9">southwester</p>
+	<p style="display: none;" id="d9">$9.45</p>
+	<input style="display: none;" type="number" id="i9" step="1" min="0"/>
+	<button style="display: none;" id="close9" onclick="close(9);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d10">carrot</p>
+	<p style="display: none;" id="d10">$3.95</p>
+	<input style="display: none;" type="number" id="i10" step="1" min="0"/>
+	<button style="display: none;" id="close10" onclick="close(10);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d11">chocolate</p>
+	<p style="display: none;" id="d11">$4.50</p>
+	<input style="display: none;" type="number" id="i11" step="1" min="0"/>
+	<button style="display: none;" id="close11" onclick="close(11);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d12">coconut</p>
+	<p style="display: none;" id="d12">$3.95</p>
+	<input style="display: none;" type="number" id="i12" step="1" min="0"/>
+	<button style="display: none;" id="close12" onclick="close(12);"><img class="im" src="cancel.png" /></button>
+	<p style="display: none;" id="d13">ice cream</p>
+	<p style="display: none;" id="d13">$2.95</p>
+	<input style="display: none;" type="number" id="i13" step="1" min="0"/>
+	<button style="display: none;" id="close13" onclick="close(13);"><img class="im" src="cancel.png" /></button>
+
+	<button class="button button1" onclick="update();">Update</button>
+	<button class="button button1" onclick="submit();">Check Out</button>
+</div>
+
+<div id="end" style="display: none;">
+	<h1>Confirmed</h1>
+	<h3 id="jso">You order has been placed</h3>
+</div>
+
+
+
+<div style="display: none;" id="total">
+	<h3>Total</h3>
+	<p id="number">Here is number</p>
+</div>
+
+<script src="Main.js"></script>
+</body>
+</HTML>
